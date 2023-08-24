@@ -25,6 +25,8 @@ namespace Snap.Hutao.Service.User;
 [Injection(InjectAs.Singleton, typeof(IUserService))]
 internal sealed partial class UserService : IUserService, IUserServiceUnsafe
 {
+    private readonly Throttler throttler = new();
+
     private readonly ScopedDbCurrent<BindingUser, Model.Entity.User, UserChangedMessage> dbCurrent;
     private readonly IUserInitializationService userInitializationService;
     private readonly IServiceProvider serviceProvider;
@@ -67,20 +69,22 @@ internal sealed partial class UserService : IUserService, IUserServiceUnsafe
     /// <inheritdoc/>
     public async ValueTask<ObservableCollection<BindingUser>> GetUserCollectionAsync()
     {
-        await taskContext.SwitchToBackgroundAsync();
-        if (userCollection is null)
+        using (await throttler.ThrottleAsync().ConfigureAwait(false))
         {
-            List<Model.Entity.User> entities = await userDbService.GetUserListAsync().ConfigureAwait(false);
-            List<BindingUser> users = await entities.SelectListAsync(userInitializationService.ResumeUserAsync, default).ConfigureAwait(false);
-            userCollection = users.ToObservableCollection();
+            if (userCollection is null)
+            {
+                List<Model.Entity.User> entities = await userDbService.GetUserListAsync().ConfigureAwait(false);
+                List<BindingUser> users = await entities.SelectListAsync(userInitializationService.ResumeUserAsync, default).ConfigureAwait(false);
+                userCollection = users.ToObservableCollection();
 
-            try
-            {
-                Current = users.SelectedOrDefault();
-            }
-            catch (InvalidOperationException ex)
-            {
-                ThrowHelper.UserdataCorrupted(SH.ServiceUserCurrentMultiMatched, ex);
+                try
+                {
+                    Current = users.SelectedOrDefault();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    ThrowHelper.UserdataCorrupted(SH.ServiceUserCurrentMultiMatched, ex);
+                }
             }
         }
 
@@ -157,13 +161,18 @@ internal sealed partial class UserService : IUserService, IUserServiceUnsafe
     }
 
     /// <inheritdoc/>
-    public async ValueTask<bool> RefreshCookieTokenAsync(BindingUser user)
+    public ValueTask<bool> RefreshCookieTokenAsync(BindingUser user)
+    {
+        return RefreshCookieTokenAsync(user.Entity);
+    }
+
+    public async ValueTask<bool> RefreshCookieTokenAsync(Model.Entity.User user)
     {
         // TODO: 提醒其他组件此用户的Cookie已更改
         Response<UidCookieToken> cookieTokenResponse = await serviceProvider
             .GetRequiredService<IOverseaSupportFactory<IPassportClient>>()
-            .Create(user.Entity.IsOversea)
-            .GetCookieAccountInfoBySTokenAsync(user.Entity)
+            .Create(user.IsOversea)
+            .GetCookieAccountInfoBySTokenAsync(user)
             .ConfigureAwait(false);
 
         if (cookieTokenResponse.IsOk())
@@ -175,7 +184,7 @@ internal sealed partial class UserService : IUserService, IUserServiceUnsafe
 
             // Sync ui and database
             user.CookieToken[Cookie.COOKIE_TOKEN] = cookieToken;
-            await userDbService.UpdateUserAsync(user.Entity).ConfigureAwait(false);
+            await userDbService.UpdateUserAsync(user).ConfigureAwait(false);
 
             return true;
         }

@@ -1474,6 +1474,33 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 备份：{0} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceGamePackageConvertMoveFileBackupFormat {
+            get {
+                return ResourceManager.GetString("ServiceGamePackageConvertMoveFileBackupFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 重命名：{0} 到：{1} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceGamePackageConvertMoveFileRenameFormat {
+            get {
+                return ResourceManager.GetString("ServiceGamePackageConvertMoveFileRenameFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 替换：{0} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceGamePackageConvertMoveFileRestoreFormat {
+            get {
+                return ResourceManager.GetString("ServiceGamePackageConvertMoveFileRestoreFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 重命名数据文件夹名称失败 的本地化字符串。
         /// </summary>
         internal static string ServiceGamePackageRenameDataFolderFailed {
@@ -5479,6 +5506,51 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 (?:〓活动时间〓|〓任务开放时间〓).*?\d\.\d版本更新(?:完成|)后永久开放 的本地化字符串。
+        /// </summary>
+        internal static string WebAnnouncementMatchPermanentActivityTime {
+            get {
+                return ResourceManager.GetString("WebAnnouncementMatchPermanentActivityTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 〓活动时间〓.*?\d\.\d版本期间持续开放 的本地化字符串。
+        /// </summary>
+        internal static string WebAnnouncementMatchPersistentActivityTime {
+            get {
+                return ResourceManager.GetString("WebAnnouncementMatchPersistentActivityTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 (?:〓活动时间〓|祈愿时间|【上架时间】).*?(\d\.\d版本更新后|\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}).*?~.*?&amp;lt;t class=&quot;t_(?:gl|lc)&quot;.*?&amp;gt;(.*?)&amp;lt;/t&amp;gt; 的本地化字符串。
+        /// </summary>
+        internal static string WebAnnouncementMatchTransientActivityTime {
+            get {
+                return ResourceManager.GetString("WebAnnouncementMatchTransientActivityTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 〓更新时间〓.+?&amp;lt;t class=\&quot;t_(?:gl|lc)\&quot;.*?&amp;gt;(.*?)&amp;lt;/t&amp;gt; 的本地化字符串。
+        /// </summary>
+        internal static string WebAnnouncementMatchVersionUpdateTime {
+            get {
+                return ResourceManager.GetString("WebAnnouncementMatchVersionUpdateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 \d\.\d版本更新说明 的本地化字符串。
+        /// </summary>
+        internal static string WebAnnouncementMatchVersionUpdateTitle {
+            get {
+                return ResourceManager.GetString("WebAnnouncementMatchVersionUpdateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 {0} 天后开始 的本地化字符串。
         /// </summary>
         internal static string WebAnnouncementTimeDaysBeginFormat {
@@ -5655,6 +5727,24 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string WebDailyNoteTransformerMinutesFormat {
             get {
                 return ResourceManager.GetString("WebDailyNoteTransformerMinutesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 尚未获得 的本地化字符串。
+        /// </summary>
+        internal static string WebDailyNoteTransformerNotObtained {
+            get {
+                return ResourceManager.GetString("WebDailyNoteTransformerNotObtained", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 尚未获得参量质变仪 的本地化字符串。
+        /// </summary>
+        internal static string WebDailyNoteTransformerNotObtainedDetail {
+            get {
+                return ResourceManager.GetString("WebDailyNoteTransformerNotObtainedDetail", resourceCulture);
             }
         }
         
