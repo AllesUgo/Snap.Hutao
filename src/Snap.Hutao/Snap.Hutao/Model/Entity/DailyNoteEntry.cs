@@ -4,10 +4,8 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using Snap.Hutao.Core.Abstraction;
 using Snap.Hutao.ViewModel.User;
-using Snap.Hutao.Web.Hoyolab;
 using Snap.Hutao.Web.Hoyolab.Takumi.Binding;
 using Snap.Hutao.Web.Hoyolab.Takumi.GameRecord.DailyNote;
-using Snap.Hutao.Web.Request.QueryString;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -54,7 +52,13 @@ internal sealed class DailyNoteEntry : ObservableObject, IMappingFrom<DailyNoteE
     /// </summary>
     public DailyNote? DailyNote { get; set; }
 
-    // TODO: Add RefreshTime
+    /// <summary>
+    /// 刷新时间
+    /// </summary>
+    public DateTimeOffset RefreshTime { get; set; }
+
+    [NotMapped]
+    public string RefreshTimeFormatted { get => SH.ModelEntityDailyNoteRefreshTimeFormat.Format(RefreshTime); }
 
     /// <summary>
     /// 树脂提醒阈值
@@ -130,5 +134,8 @@ internal sealed class DailyNoteEntry : ObservableObject, IMappingFrom<DailyNoteE
     {
         DailyNote = dailyNote;
         OnPropertyChanged(nameof(DailyNote));
+
+        RefreshTime = DateTimeOffset.Now;
+        OnPropertyChanged(nameof(RefreshTime));
     }
 }

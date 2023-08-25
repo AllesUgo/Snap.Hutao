@@ -421,6 +421,15 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 刷新于 {0:yyyy/MM/dd HH:mm:ss} 的本地化字符串。
+        /// </summary>
+        internal static string ModelEntityDailyNoteRefreshTimeFormat {
+            get {
+                return ResourceManager.GetString("ModelEntityDailyNoteRefreshTimeFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 第 {0} 期 的本地化字符串。
         /// </summary>
         internal static string ModelEntitySpiralAbyssScheduleFormat {
@@ -1335,6 +1344,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ServiceGachaLogHutaoCloudServiceNotAllowed {
             get {
                 return ResourceManager.GetString("ServiceGachaLogHutaoCloudServiceNotAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 数据包含异常物品, Id：{0} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceGachaLogUIGFImportItemInvalidFormat {
+            get {
+                return ResourceManager.GetString("ServiceGachaLogUIGFImportItemInvalidFormat", resourceCulture);
             }
         }
         
@@ -3490,6 +3508,42 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 自动刷新 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageDailyNoteSettingAutoRefresh {
+            get {
+                return ResourceManager.GetString("ViewPageDailyNoteSettingAutoRefresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 间隔选定的时间后刷新添加的实时便笺 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageDailyNoteSettingAutoRefreshDescription {
+            get {
+                return ResourceManager.GetString("ViewPageDailyNoteSettingAutoRefreshDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 这些选项仅允许在非管理员模式下更改 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageDailyNoteSettingRefreshElevatedHint {
+            get {
+                return ResourceManager.GetString("ViewPageDailyNoteSettingRefreshElevatedHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 刷新 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageDailyNoteSettingRefreshHeader {
+            get {
+                return ResourceManager.GetString("ViewPageDailyNoteSettingRefreshHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 在我游玩原神时不通知我 的本地化字符串。
         /// </summary>
         internal static string ViewPageDailyNoteSlientModeDescription {
@@ -5637,6 +5691,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string WebDailyNoteHomeCoinRecoveryFormat {
             get {
                 return ResourceManager.GetString("WebDailyNoteHomeCoinRecoveryFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 尚未解锁洞天 的本地化字符串。
+        /// </summary>
+        internal static string WebDailyNoteHomeLocked {
+            get {
+                return ResourceManager.GetString("WebDailyNoteHomeLocked", resourceCulture);
             }
         }
         
