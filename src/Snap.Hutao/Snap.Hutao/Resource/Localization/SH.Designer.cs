@@ -754,6 +754,15 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 旅行者 的本地化字符串。
+        /// </summary>
+        internal static string ModelMetadataAvatarPlayerName {
+            get {
+                return ResourceManager.GetString("ModelMetadataAvatarPlayerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 {0} 月 {1} 日 的本地化字符串。
         /// </summary>
         internal static string ModelMetadataFetterInfoBirthdayFormat {
@@ -1699,6 +1708,33 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 签到失败，{0} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceSignInClaimRewardFailedFormat {
+            get {
+                return ResourceManager.GetString("ServiceSignInClaimRewardFailedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 获取奖励列表失败 的本地化字符串。
+        /// </summary>
+        internal static string ServiceSignInRewardListRequestFailed {
+            get {
+                return ResourceManager.GetString("ServiceSignInRewardListRequestFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 签到成功，{0}×{1} 的本地化字符串。
+        /// </summary>
+        internal static string ServiceSignInSuccessRewardFormat {
+            get {
+                return ResourceManager.GetString("ServiceSignInSuccessRewardFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 多个用户记录为选中状态 的本地化字符串。
         /// </summary>
         internal static string ServiceUserCurrentMultiMatched {
@@ -2631,6 +2667,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ViewModelDailyNoteRegisterTaskFail {
             get {
                 return ResourceManager.GetString("ViewModelDailyNoteRegisterTaskFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 正在获取实时便笺信息，请稍候 的本地化字符串。
+        /// </summary>
+        internal static string ViewModelDailyNoteRequestProgressTitle {
+            get {
+                return ResourceManager.GetString("ViewModelDailyNoteRequestProgressTitle", resourceCulture);
             }
         }
         
@@ -5398,11 +5443,20 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
-        ///   查找类似 HoYoLab 的本地化字符串。
+        ///   查找类似 HoYoLAB 的本地化字符串。
         /// </summary>
         internal static string ViewUserCookieOperation2 {
             get {
                 return ResourceManager.GetString("ViewUserCookieOperation2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 当前用户 的本地化字符串。
+        /// </summary>
+        internal static string ViewUserCookieOperation3 {
+            get {
+                return ResourceManager.GetString("ViewUserCookieOperation3", resourceCulture);
             }
         }
         
@@ -5430,6 +5484,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ViewUserCookieOperationRefreshCookieAction {
             get {
                 return ResourceManager.GetString("ViewUserCookieOperationRefreshCookieAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 领取签到奖励 的本地化字符串。
+        /// </summary>
+        internal static string ViewUserCookieOperationSignInRewardAction {
+            get {
+                return ResourceManager.GetString("ViewUserCookieOperationSignInRewardAction", resourceCulture);
             }
         }
         
@@ -5970,6 +6033,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string WebResponseFormat {
             get {
                 return ResourceManager.GetString("WebResponseFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请刷新 Cookie，原始消息：{0} 的本地化字符串。
+        /// </summary>
+        internal static string WebResponseRefreshCookieHintFormat {
+            get {
+                return ResourceManager.GetString("WebResponseRefreshCookieHintFormat", resourceCulture);
             }
         }
         

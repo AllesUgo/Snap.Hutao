@@ -13,6 +13,7 @@ using MetadataReliquary = Snap.Hutao.Model.Metadata.Reliquary.Reliquary;
 using ModelAvatarInfo = Snap.Hutao.Web.Enka.Model.AvatarInfo;
 
 namespace Snap.Hutao.Service.AvatarInfo.Factory;
+
 internal sealed class SummaryReliquarySubPropertyCompositionInfo
 {
     public SummaryReliquarySubPropertyCompositionInfo(FightProperty type)
@@ -28,6 +29,6 @@ internal sealed class SummaryReliquarySubPropertyCompositionInfo
 
     public ReliquaryComposedSubProperty ToReliquaryComposedSubProperty()
     {
-        return new(Type, FightPropertyFormat.FormatValue(Type, Value), 0);
+        return new(Type, FightPropertyFormat.FormatValue(Type, Value), 0) { EnhancedCount = Count };
     }
 }
