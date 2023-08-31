@@ -69,8 +69,17 @@ namespace Snap.Hutao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTimeOffset>("CalculatorRefreshTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("GameRecordRefreshTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Info")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("ShowcaseRefreshTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Uid")

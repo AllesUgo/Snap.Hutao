@@ -74,6 +74,13 @@ internal class Response
     public static Response<TData> DefaultIfNull<TData>(Response<TData>? response, [CallerMemberName] string callerName = default!)
     {
         // 0x26F19335 is a magic number that hashed from "Snap.Hutao"
+        response ??= new(0x26F19335, SH.WebResponseRequestExceptionFormat.Format(callerName, typeof(TData).Name), default);
+
+        if (((KnownReturnCode)response.ReturnCode) is KnownReturnCode.PleaseLogin or KnownReturnCode.RET_TOKEN_INVALID)
+        {
+            response.Message = SH.WebResponseRefreshCookieHintFormat.Format(response.Message);
+        }
+
         return response ?? new(0x26F19335, SH.WebResponseRequestExceptionFormat.Format(callerName, typeof(TData).Name), default);
     }
 
@@ -96,6 +103,24 @@ internal class Response
         {
             // Magic number that hashed from "Snap.Hutao"
             return new(0x26F19335, SH.WebResponseRequestExceptionFormat.Format(callerName, typeof(TData).Name), default);
+        }
+    }
+
+    public virtual bool IsOk(bool showInfoBar = true, IServiceProvider? serviceProvider = null)
+    {
+        if (ReturnCode == 0)
+        {
+            return true;
+        }
+        else
+        {
+            if (showInfoBar)
+            {
+                serviceProvider ??= Ioc.Default;
+                serviceProvider.GetRequiredService<IInfoBarService>().Error(ToString());
+            }
+
+            return false;
         }
     }
 
@@ -140,7 +165,7 @@ internal sealed class Response<TData> : Response, IJsResult
     /// <param name="serviceProvider">服务提供器</param>
     /// <returns>是否Ok</returns>
     [MemberNotNullWhen(true, nameof(Data))]
-    public bool IsOk(bool showInfoBar = true, IServiceProvider? serviceProvider = null)
+    public override bool IsOk(bool showInfoBar = true, IServiceProvider? serviceProvider = null)
     {
         if (ReturnCode == 0)
         {
