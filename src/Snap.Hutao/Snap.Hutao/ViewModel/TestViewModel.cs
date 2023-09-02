@@ -4,7 +4,7 @@
 using Snap.Hutao.Core.Setting;
 using Snap.Hutao.Service.Notification;
 using Snap.Hutao.ViewModel.Guide;
-using Snap.Hutao.Web.Hutao.Announcement;
+using Snap.Hutao.Web.Hutao.HutaoAsAService;
 
 namespace Snap.Hutao.ViewModel;
 
@@ -18,11 +18,18 @@ internal sealed partial class TestViewModel : Abstraction.ViewModel
 {
     private readonly IInfoBarService infoBarService;
     private readonly ITaskContext taskContext;
-    private readonly HomaAsAServiceClient homaAsAServiceClient;
+    private readonly HutaoAsAServiceClient homaAsAServiceClient;
 
     private UploadAnnouncement announcement = new();
 
     public UploadAnnouncement Announcement { get => announcement; set => SetProperty(ref announcement, value); }
+
+    [SuppressMessage("", "CA1822")]
+    public bool SuppressMetadataInitialization
+    {
+        get => LocalSetting.Get(SettingKeys.SuppressMetadataInitialization, false);
+        set => LocalSetting.Set(SettingKeys.SuppressMetadataInitialization, value);
+    }
 
     protected override ValueTask<bool> InitializeUIAsync()
     {
@@ -39,6 +46,18 @@ internal sealed partial class TestViewModel : Abstraction.ViewModel
     private async void UploadAnnouncementAsync()
     {
         Web.Response.Response response = await homaAsAServiceClient.UploadAnnouncementAsync(Announcement).ConfigureAwait(false);
+        if (response.IsOk())
+        {
+            infoBarService.Success(response.Message);
+            await taskContext.SwitchToMainThreadAsync();
+            Announcement = new();
+        }
+    }
+
+    [Command("CompensationGachaLogServiceTimeCommand")]
+    private async void CompensationGachaLogServiceTimeAsync()
+    {
+        Web.Response.Response response = await homaAsAServiceClient.GachaLogCompensationAsync(15).ConfigureAwait(false);
         if (response.IsOk())
         {
             infoBarService.Success(response.Message);
