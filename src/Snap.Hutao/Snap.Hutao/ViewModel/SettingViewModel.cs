@@ -8,6 +8,7 @@ using Snap.Hutao.Core;
 using Snap.Hutao.Core.IO;
 using Snap.Hutao.Core.IO.DataTransfer;
 using Snap.Hutao.Core.Setting;
+using Snap.Hutao.Core.Shell;
 using Snap.Hutao.Core.Windowing;
 using Snap.Hutao.Factory.Abstraction;
 using Snap.Hutao.Model;
@@ -23,6 +24,7 @@ using Snap.Hutao.ViewModel.Guide;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
+using Windows.Storage.Pickers;
 using Windows.System;
 
 namespace Snap.Hutao.ViewModel;
@@ -35,17 +37,18 @@ namespace Snap.Hutao.ViewModel;
 [Injection(InjectAs.Scoped)]
 internal sealed partial class SettingViewModel : Abstraction.ViewModel
 {
-    private readonly IGameLocatorFactory gameLocatorFactory;
-    private readonly IClipboardInterop clipboardInterop;
     private readonly IContentDialogFactory contentDialogFactory;
+    private readonly IGameLocatorFactory gameLocatorFactory;
     private readonly INavigationService navigationService;
+    private readonly IClipboardInterop clipboardInterop;
+    private readonly IShellLinkInterop shellLinkInterop;
+    private readonly HutaoUserOptions hutaoUserOptions;
+    private readonly IInfoBarService infoBarService;
+    private readonly RuntimeOptions runtimeOptions;
     private readonly IPickerFactory pickerFactory;
     private readonly IUserService userService;
-    private readonly IInfoBarService infoBarService;
     private readonly ITaskContext taskContext;
     private readonly AppOptions appOptions;
-    private readonly RuntimeOptions runtimeOptions;
-    private readonly HutaoUserOptions hutaoUserOptions;
 
     private NameValue<BackdropType>? selectedBackdropType;
     private NameValue<string>? selectedCulture;
@@ -117,6 +120,19 @@ internal sealed partial class SettingViewModel : Abstraction.ViewModel
         }
     }
 
+    [Command("SetPowerShellPathCommand")]
+    private async Task SetPowerShellPathAsync()
+    {
+        FileOpenPicker picker = pickerFactory.GetFileOpenPicker(PickerLocationId.DocumentsLibrary, SH.FilePickerPowerShellCommit, ".exe");
+        (bool isOk, ValueFile file) = await picker.TryPickSingleFileAsync().ConfigureAwait(false);
+
+        if (isOk && Path.GetFileNameWithoutExtension(file).Equals("POWERSHELL", StringComparison.OrdinalIgnoreCase))
+        {
+            await taskContext.SwitchToMainThreadAsync();
+            Options.PowerShellPath = file;
+        }
+    }
+
     [Command("DeleteGameWebCacheCommand")]
     private void DeleteGameWebCache()
     {
@@ -146,17 +162,6 @@ internal sealed partial class SettingViewModel : Abstraction.ViewModel
                 infoBarService.Warning(SH.ViewModelSettingClearWebCachePathInvalid.Format(cacheFolder));
             }
         }
-    }
-
-    [Command("ShowSignInWebViewDialogCommand")]
-    private async Task ShowSignInWebViewDialogAsync()
-    {
-        // ContentDialog must be created by main thread.
-        await taskContext.SwitchToMainThreadAsync();
-
-        // TODO remove this.
-        // SignInWebViewDialog dialog = serviceProvider.CreateInstance<SignInWebViewDialog>();
-        // await dialog.ShowAsync();
     }
 
     [Command("UpdateCheckCommand")]
@@ -250,5 +255,12 @@ internal sealed partial class SettingViewModel : Abstraction.ViewModel
             appOptions.GeetestCustomCompositeUrl = template;
             infoBarService.Success("无感验证复合 Url 配置成功");
         }
+    }
+
+    [Command("CreateDesktopShortcutCommand")]
+    private void CreateDesktopShortcutForElevatedLaunch()
+    {
+        shellLinkInterop.CreateDesktopShoutcutForElevatedLaunch();
+        infoBarService.Information(SH.ViewModelSettingActionComplete);
     }
 }

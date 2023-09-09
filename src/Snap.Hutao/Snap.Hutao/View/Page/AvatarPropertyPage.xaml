@@ -89,11 +89,17 @@
                         CommandParameter="{Binding ElementName=ItemsPanelSelector, Path=Current, Converter={StaticResource PanelSelectorModeConverter}}"
                         Icon="{shcm:FontIcon Glyph=&#xE91B;}"
                         Label="{shcm:ResourceString Name=ViewPageAvatarPropertyExportAsImage}"/>
-                    <AppBarButton
-                        Command="{Binding CultivateCommand}"
-                        CommandParameter="{Binding SelectedAvatar}"
-                        Icon="{shcm:FontIcon Glyph=&#xE8EF;}"
-                        Label="{shcm:ResourceString Name=ViewPageCultivateCalculate}"/>
+                    <AppBarButton Icon="{shcm:FontIcon Glyph=&#xE8EF;}" Label="{shcm:ResourceString Name=ViewPageCultivateCalculate}">
+                        <AppBarButton.Flyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem
+                                    Command="{Binding CultivateCommand}"
+                                    CommandParameter="{Binding SelectedAvatar}"
+                                    Text="{shcm:ResourceString Name=ViewPageAvatarPropertyCalculateCurrent}"/>
+                                <MenuFlyoutItem Command="{Binding BatchCultivateCommand}" Text="{shcm:ResourceString Name=ViewPageAvatarPropertyCalculateAll}"/>
+                            </MenuFlyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
                     <AppBarSeparator/>
                     <AppBarButton Icon="{shcm:FontIcon Glyph=&#xE72C;}" Label="{shcm:ResourceString Name=ViewAvatarPropertySyncDataButtonLabel}">
                         <AppBarButton.Flyout>
@@ -410,15 +416,21 @@
                                                             <Button.Flyout>
                                                                 <Flyout Placement="BottomEdgeAlignedLeft">
                                                                     <StackPanel>
+                                                                        <StackPanel.Resources>
+                                                                            <x:Double x:Key="SettingsCardSpacing">3</x:Double>
+                                                                            <x:Double x:Key="SettingsCardMinHeight">0</x:Double>
+                                                                            <x:Double x:Key="SettingsCardWrapThreshold">0</x:Double>
+                                                                            <x:Double x:Key="SettingsCardWrapNoIconThreshold">0</x:Double>
+                                                                        </StackPanel.Resources>
                                                                         <cwc:SettingsCard
                                                                             Margin="0,2,0,0"
-                                                                            Padding="12,0"
+                                                                            Padding="12"
                                                                             Header="{Binding MainProperty.Name}">
                                                                             <TextBlock Text="{Binding MainProperty.Value}"/>
                                                                         </cwc:SettingsCard>
                                                                         <cwc:SettingsCard
                                                                             Margin="0,2,0,0"
-                                                                            Padding="12,0"
+                                                                            Padding="12"
                                                                             Header="{Binding SubProperty.Name}">
                                                                             <TextBlock Text="{Binding SubProperty.Description}"/>
                                                                         </cwc:SettingsCard>

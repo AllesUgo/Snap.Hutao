@@ -268,6 +268,15 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 选择 PowerShell 的本地化字符串。
+        /// </summary>
+        internal static string FilePickerPowerShellCommit {
+            get {
+                return ResourceManager.GetString("FilePickerPowerShellCommit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 欢迎使用胡桃 的本地化字符串。
         /// </summary>
         internal static string GuideWindowTitle {
@@ -849,6 +858,24 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ModelMetadataMaterialWeaponEnhancementMaterial {
             get {
                 return ResourceManager.GetString("ModelMetadataMaterialWeaponEnhancementMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请更新角色橱窗数据 的本地化字符串。
+        /// </summary>
+        internal static string ModelNameValueDefaultDescription {
+            get {
+                return ResourceManager.GetString("ModelNameValueDefaultDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 暂无数据 的本地化字符串。
+        /// </summary>
+        internal static string ModelNameValueDefaultName {
+            get {
+                return ResourceManager.GetString("ModelNameValueDefaultName", resourceCulture);
             }
         }
         
@@ -2230,6 +2257,51 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 角色目标等级 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivateBatchAvatarLevelTarget {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivateBatchAvatarLevelTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 普通攻击目标等级 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivateBatchSkillATarget {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivateBatchSkillATarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 元素战技目标等级 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivateBatchSkillETarget {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivateBatchSkillETarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 元素爆发目标等级 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivateBatchSkillQTarget {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivateBatchSkillQTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 武器目标等级 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivateBatchWeaponLevelTarget {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivateBatchWeaponLevelTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 绑定当前用户与角色 的本地化字符串。
         /// </summary>
         internal static string ViewDialogCultivateProjectAttachUid {
@@ -2257,7 +2329,16 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
-        ///   查找类似 添加到当前养成计划 的本地化字符串。
+        ///   查找类似 批量添加或更新到当前养成计划 的本地化字符串。
+        /// </summary>
+        internal static string ViewDialogCultivatePromotionDeltaBatchTitle {
+            get {
+                return ResourceManager.GetString("ViewDialogCultivatePromotionDeltaBatchTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 添加或更新到当前养成计划 的本地化字符串。
         /// </summary>
         internal static string ViewDialogCultivatePromotionDeltaTitle {
             get {
@@ -2869,6 +2950,15 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 获取培养材料中，请稍候... 的本地化字符串。
+        /// </summary>
+        internal static string ViewModelAvatarPropertyBatchCultivateProgressTitle {
+            get {
+                return ResourceManager.GetString("ViewModelAvatarPropertyBatchCultivateProgressTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 当前角色无法计算，请同步信息后再试 的本地化字符串。
         /// </summary>
         internal static string ViewModelAvatarPropertyCalculateWeaponNull {
@@ -2937,6 +3027,24 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ViewModelCultivationAddWarning {
             get {
                 return ResourceManager.GetString("ViewModelCultivationAddWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 操作完成：添加/更新：{0} 个，跳过 {1} 个 的本地化字符串。
+        /// </summary>
+        internal static string ViewModelCultivationBatchAddCompletedFormat {
+            get {
+                return ResourceManager.GetString("ViewModelCultivationBatchAddCompletedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 操作未全部完成：添加/更新：{0} 个，跳过 {1} 个 的本地化字符串。
+        /// </summary>
+        internal static string ViewModelCultivationBatchAddIncompletedFormat {
+            get {
+                return ResourceManager.GetString("ViewModelCultivationBatchAddIncompletedFormat", resourceCulture);
             }
         }
         
@@ -3346,6 +3454,15 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 操作完成 的本地化字符串。
+        /// </summary>
+        internal static string ViewModelSettingActionComplete {
+            get {
+                return ResourceManager.GetString("ViewModelSettingActionComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 清除失败，文件目录权限不足，请使用管理员模式重试 的本地化字符串。
         /// </summary>
         internal static string ViewModelSettingClearWebCacheFail {
@@ -3603,6 +3720,24 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ViewPageAvatarPropertyArtifactScore {
             get {
                 return ResourceManager.GetString("ViewPageAvatarPropertyArtifactScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 所有角色与武器 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageAvatarPropertyCalculateAll {
+            get {
+                return ResourceManager.GetString("ViewPageAvatarPropertyCalculateAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 当前角色与武器 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageAvatarPropertyCalculateCurrent {
+            get {
+                return ResourceManager.GetString("ViewPageAvatarPropertyCalculateCurrent", resourceCulture);
             }
         }
         
@@ -5101,6 +5236,33 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
+        ///   查找类似 创建 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageSettingCreateDesktopShortcutAction {
+            get {
+                return ResourceManager.GetString("ViewPageSettingCreateDesktopShortcutAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 在桌面上创建默认以管理员方式启动的快捷方式，更新后需要重新创建 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageSettingCreateDesktopShortcutDescription {
+            get {
+                return ResourceManager.GetString("ViewPageSettingCreateDesktopShortcutDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 创建快捷方式 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageSettingCreateDesktopShortcutHeader {
+            get {
+                return ResourceManager.GetString("ViewPageSettingCreateDesktopShortcutHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 执行 的本地化字符串。
         /// </summary>
         internal static string ViewPageSettingDangerousAction {
@@ -5412,6 +5574,15 @@ namespace Snap.Hutao.Resource.Localization {
         internal static string ViewPageSettingSetGamePathHint {
             get {
                 return ResourceManager.GetString("ViewPageSettingSetGamePathHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 PowerShell 路径 的本地化字符串。
+        /// </summary>
+        internal static string ViewPageSettingSetPowerShellPathHeader {
+            get {
+                return ResourceManager.GetString("ViewPageSettingSetPowerShellPathHeader", resourceCulture);
             }
         }
         
@@ -6100,7 +6271,7 @@ namespace Snap.Hutao.Resource.Localization {
         }
         
         /// <summary>
-        ///   查找类似 (?:〓活动时间〓|祈愿时间|【上架时间】).*?(\d\.\d版本更新后|\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}).*?~.*?&amp;lt;t class=&quot;t_(?:gl|lc)&quot;.*?&amp;gt;(.*?)&amp;lt;/t&amp;gt; 的本地化字符串。
+        ///   查找类似 (?:〓活动时间〓|祈愿时间|【上架时间】).*?(\d\.\d版本更新后).*?~.*?&amp;lt;t class=&quot;t_(?:gl|lc)&quot;.*?&amp;gt;(.*?)&amp;lt;/t&amp;gt; 的本地化字符串。
         /// </summary>
         internal static string WebAnnouncementMatchTransientActivityTime {
             get {

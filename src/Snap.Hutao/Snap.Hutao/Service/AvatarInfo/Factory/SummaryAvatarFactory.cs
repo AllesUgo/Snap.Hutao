@@ -1,7 +1,9 @@
 ﻿// Copyright (c) DGP Studio. All rights reserved.
 // Licensed under the MIT license.
 
+using Snap.Hutao.Model;
 using Snap.Hutao.Model.Intrinsic;
+using Snap.Hutao.Model.Intrinsic.Format;
 using Snap.Hutao.Model.Metadata.Converter;
 using Snap.Hutao.Model.Primitive;
 using Snap.Hutao.ViewModel.AvatarProperty;
@@ -145,12 +147,11 @@ internal sealed class SummaryAvatarFactory
         NameDescription subProperty;
         if (subStat is null)
         {
-            subProperty = new(string.Empty, string.Empty);
+            subProperty = NameDescription.Default;
         }
         else
         {
-            // 是否为整数
-            float statValue = subStat.StatValue == MathF.Truncate(subStat.StatValue)
+            float statValue = subStat.AppendPropId.GetFormatMethod() is FormatMethod.Percent
                 ? subStat.StatValue / 100F
                 : subStat.StatValue;
             subProperty = FightPropertyFormat.ToNameDescription(subStat.AppendPropId, statValue);
@@ -168,7 +169,7 @@ internal sealed class SummaryAvatarFactory
             // EquipBase
             Level = $"Lv.{equip.Weapon.Level.Value}",
             Quality = weapon.Quality,
-            MainProperty = mainStat is not null ? FightPropertyFormat.ToNameValue(mainStat.AppendPropId, mainStat.StatValue) : default!,
+            MainProperty = mainStat is not null ? FightPropertyFormat.ToNameValue(mainStat.AppendPropId, mainStat.StatValue) : NameValueDefaults.String,
 
             // Weapon
             Id = weapon.Id,

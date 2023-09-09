@@ -163,7 +163,7 @@ internal sealed partial class GameService : IGameService
             }
         }
 
-        return changed || !LaunchSchemeMatchesExecutable(scheme, Path.GetFileName(gamePath));
+        return changed;
     }
 
     /// <inheritdoc/>
@@ -184,7 +184,7 @@ internal sealed partial class GameService : IGameService
         {
             GameResource resource = response.Data;
 
-            if (!LaunchSchemeMatchesExecutable(launchScheme, gameFileName))
+            if (!launchScheme.ExecutableMatches(gameFileName))
             {
                 bool replaced = await packageConverter
                     .EnsureGameResourceAsync(launchScheme, resource, gameFolder, progress)
@@ -346,7 +346,12 @@ internal sealed partial class GameService : IGameService
     /// <inheritdoc/>
     public bool SetGameAccount(GameAccount account)
     {
-        return RegistryInterop.Set(account);
+        if (string.IsNullOrEmpty(appOptions.PowerShellPath))
+        {
+            ThrowHelper.RuntimeEnvironment(SH.ServiceGameRegisteryInteropPowershellNotFound, default!);
+        }
+
+        return RegistryInterop.Set(account, appOptions.PowerShellPath);
     }
 
     /// <inheritdoc/>
