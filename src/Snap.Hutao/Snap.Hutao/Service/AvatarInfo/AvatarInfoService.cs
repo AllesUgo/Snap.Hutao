@@ -9,7 +9,6 @@ using Snap.Hutao.ViewModel.User;
 using Snap.Hutao.Web.Enka;
 using Snap.Hutao.Web.Enka.Model;
 using Snap.Hutao.Web.Hoyolab;
-using EnkaAvatarInfo = Snap.Hutao.Web.Enka.Model.AvatarInfo;
 using EntityAvatarInfo = Snap.Hutao.Model.Entity.AvatarInfo;
 
 namespace Snap.Hutao.Service.AvatarInfo;
@@ -78,7 +77,7 @@ internal sealed partial class AvatarInfoService : IAvatarInfoService
 
                 default:
                     {
-                        List<EntityAvatarInfo> list = avatarInfoDbService.GetAvatarInfoListByUid(userAndUid.Uid.Value);
+                        List<EntityAvatarInfo> list = await avatarInfoDbService.GetAvatarInfoListByUidAsync(userAndUid.Uid.Value).ConfigureAwait(false);
                         Summary summary = await GetSummaryCoreAsync(list, token).ConfigureAwait(false);
                         token.ThrowIfCancellationRequested();
                         return new(RefreshResult.Ok, summary.Avatars.Count == 0 ? null : summary);
@@ -97,7 +96,7 @@ internal sealed partial class AvatarInfoService : IAvatarInfoService
             ?? await enkaClient.GetDataAsync(uid, token).ConfigureAwait(false);
     }
 
-    private async ValueTask<Summary> GetSummaryCoreAsync(IEnumerable<Model.Entity.AvatarInfo> avatarInfos, CancellationToken token)
+    private async ValueTask<Summary> GetSummaryCoreAsync(IEnumerable<EntityAvatarInfo> avatarInfos, CancellationToken token)
     {
         using (ValueStopwatch.MeasureExecution(logger))
         {

@@ -3,7 +3,6 @@
 
 using Snap.Hutao.Core.Database;
 using Snap.Hutao.Model.Entity;
-using Snap.Hutao.Model.Entity.Database;
 using System.Collections.ObjectModel;
 
 namespace Snap.Hutao.Service.Cultivation;
@@ -75,6 +74,6 @@ internal sealed partial class CultivationService
 
         // Sync database
         await taskContext.SwitchToBackgroundAsync();
-        await cultivationDbService.DeleteCultivateProjectByIdAsync(project.InnerId).ConfigureAwait(false);
+        await cultivationDbService.RemoveCultivateProjectByIdAsync(project.InnerId).ConfigureAwait(false);
     }
 }

@@ -13,32 +13,14 @@ internal sealed class UIIFItem
     /// 物品Id
     /// </summary>
     [JsonPropertyName("itemId")]
-    public int ItemId { get; set; }
+    public uint ItemId { get; set; }
 
-    /// <summary>
-    /// 物品Id
-    /// </summary>
-    [JsonPropertyName("count")]
-    public int Count { get; set; }
+    [JsonPropertyName("material")]
+    public UIIFCountInfo? Material { get; set; } = default!;
 
-    /// <summary>
-    /// 等级
-    /// Reliquary/Weapon
-    /// </summary>
-    [JsonPropertyName("level")]
-    public int? Level { get; set; }
+    [JsonPropertyName("furniture")]
+    public UIIFCountInfo? Furniture { get; set; } = default!;
 
-    /// <summary>
-    /// 副属性列表
-    /// Reliquary
-    /// </summary>
-    [JsonPropertyName("appendPropIdList")]
-    public List<int>? AppendPropIdList { get; set; } = default!;
-
-    /// <summary>
-    /// 精炼等级 0-4
-    /// Weapon
-    /// </summary>
-    [JsonPropertyName("promoteLevel")]
-    public int? PromoteLevel { get; set; }
+    [JsonPropertyName("equip")]
+    public UIIFEquip? Equip { get; set; } = default!;
 }

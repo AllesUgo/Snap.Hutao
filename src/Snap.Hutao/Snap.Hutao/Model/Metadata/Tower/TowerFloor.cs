@@ -29,4 +29,9 @@ internal sealed class TowerFloor
     /// 背景图片
     /// </summary>
     public string Background { get; set; } = default!;
+
+    /// <summary>
+    /// 地脉紊乱
+    /// </summary>
+    public List<string> Descriptions { get; set; } = default!;
 }

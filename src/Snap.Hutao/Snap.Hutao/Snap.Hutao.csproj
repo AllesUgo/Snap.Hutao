@@ -72,6 +72,7 @@
     <None Remove="Assets\Wide310x150Logo.scale-200.png" />
     <None Remove="Assets\Wide310x150Logo.scale-400.png" />
     <None Remove="CodeMetricsConfig.txt" />
+    <None Remove="Control\Loading.xaml" />
     <None Remove="Control\Panel\PanelSelector.xaml" />
     <None Remove="Control\Theme\FontStyle.xaml" />
     <None Remove="GuideWindow.xaml" />
@@ -79,6 +80,7 @@
     <None Remove="LaunchGameWindow.xaml" />
     <None Remove="NativeMethods.json" />
     <None Remove="NativeMethods.txt" />
+    <None Remove="Resource\BlurBackground.png" />
     <None Remove="Resource\Font\CascadiaMono.ttf" />
     <None Remove="Resource\Font\MiSans-Regular.ttf" />
     <None Remove="Resource\HutaoIconSourceTransparentBackgroundGradient1.png" />
@@ -94,6 +96,7 @@
     <None Remove="Resource\Navigation\Cultivation.png" />
     <None Remove="Resource\Navigation\DailyNote.png" />
     <None Remove="Resource\Navigation\Database.png" />
+    <None Remove="Resource\Navigation\Documentation.png" />
     <None Remove="Resource\Navigation\GachaLog.png" />
     <None Remove="Resource\Navigation\LaunchGame.png" />
     <None Remove="Resource\Navigation\SpiralAbyss.png" />
@@ -104,12 +107,13 @@
     <None Remove="Resource\WelcomeView_Background.png" />
     <None Remove="stylecop.json" />
     <None Remove="View\Card\AchievementCard.xaml" />
+    <None Remove="View\Card\CardBlock.xaml" />
     <None Remove="View\Card\DailyNoteCard.xaml" />
     <None Remove="View\Card\GachaStatisticsCard.xaml" />
     <None Remove="View\Card\LaunchGameCard.xaml" />
+    <None Remove="View\Card\Primitive\CardProgressBar.xaml" />
     <None Remove="View\Control\BaseValueSlider.xaml" />
     <None Remove="View\Control\BottomTextControl.xaml" />
-    <None Remove="View\Control\BottomTextSmallControl.xaml" />
     <None Remove="View\Control\DescParamComboBox.xaml" />
     <None Remove="View\Control\Elevation.xaml" />
     <None Remove="View\Control\HutaoStatisticsCard.xaml" />
@@ -120,7 +124,7 @@
     <None Remove="View\Control\SkillPivot.xaml" />
     <None Remove="View\Control\StatisticsCard.xaml" />
     <None Remove="View\Control\StatisticsSegmented.xaml" />
-    <None Remove="View\Control\Webview2Viewer.xaml" />
+    <None Remove="View\Control\WebViewer.xaml" />
     <None Remove="View\Dialog\AchievementArchiveCreateDialog.xaml" />
     <None Remove="View\Dialog\AchievementImportDialog.xaml" />
     <None Remove="View\Dialog\CultivateProjectDialog.xaml" />
@@ -145,7 +149,6 @@
     <None Remove="View\Page\CultivationPage.xaml" />
     <None Remove="View\Page\DailyNotePage.xaml" />
     <None Remove="View\Page\GachaLogPage.xaml" />
-    <None Remove="View\Page\HutaoDatabasePage.xaml" />
     <None Remove="View\Page\HutaoPassportPage.xaml" />
     <None Remove="View\Page\LaunchGamePage.xaml" />
     <None Remove="View\Page\LoginMihoyoUserPage.xaml" />
@@ -206,6 +209,7 @@
 
   <!-- Resources Files -->
   <ItemGroup>
+    <Content Include="Resource\BlurBackground.png" />
     <Content Include="Resource\Font\CascadiaMono.ttf" />
     <Content Include="Resource\Font\MiSans-Regular.ttf" />
     <Content Include="Resource\HutaoIconSourceTransparentBackgroundGradient1.png" />
@@ -221,6 +225,7 @@
     <Content Include="Resource\Navigation\Cultivation.png" />
     <Content Include="Resource\Navigation\DailyNote.png" />
     <Content Include="Resource\Navigation\Database.png" />
+    <Content Include="Resource\Navigation\Documentation.png" />
     <Content Include="Resource\Navigation\GachaLog.png" />
     <Content Include="Resource\Navigation\LaunchGame.png" />
     <Content Include="Resource\Navigation\SpiralAbyss.png" />
@@ -239,16 +244,16 @@
     <PackageReference Include="CommunityToolkit.Labs.WinUI.TokenView" Version="0.1.230809" />
     <PackageReference Include="CommunityToolkit.Labs.WinUI.TransitionHelper" Version="0.1.230809" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2-build.1" />
-    <PackageReference Include="CommunityToolkit.WinUI.Behaviors" Version="8.0.230828-rc" />
-    <PackageReference Include="CommunityToolkit.WinUI.Controls.HeaderedControls" Version="8.0.230828-rc" />
-    <PackageReference Include="CommunityToolkit.WinUI.Controls.Primitives" Version="8.0.230828-rc" />
-    <PackageReference Include="CommunityToolkit.WinUI.Controls.Segmented" Version="8.0.230828-rc" />
-    <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.0.230828-rc" />
-    <PackageReference Include="CommunityToolkit.WinUI.Media" Version="8.0.230828-rc" />
+    <PackageReference Include="CommunityToolkit.WinUI.Behaviors" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Collections" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.HeaderedControls" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.Primitives" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.Segmented" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.0.230907" />
+    <PackageReference Include="CommunityToolkit.WinUI.Media" Version="8.0.230907" />
     <PackageReference Include="CommunityToolkit.WinUI.Notifications" Version="7.1.2" />
-    <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.Core" Version="7.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -260,7 +265,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230822000" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.507">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -301,6 +306,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="View\Card\Primitive\CardProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\Card\CardBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Control\Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="View\Dialog\CultivatePromotionDeltaBatchDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,13 +342,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="View\Control\Webview2Viewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Update="View\Control\BottomTextSmallControl.xaml">
+    <Page Update="View\Control\WebViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -462,11 +479,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\Page\LaunchGamePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="View\Page\HutaoDatabasePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

@@ -186,6 +186,9 @@
   <data name="FilePickerImportCommit" xml:space="preserve">
     <value>Import</value>
   </data>
+  <data name="FilePickerPowerShellCommit" xml:space="preserve">
+    <value>Select PowerShell</value>
+  </data>
   <data name="GuideWindowTitle" xml:space="preserve">
     <value>Welcome to Snap Hutao, Traveler ~</value>
   </data>
@@ -241,7 +244,7 @@
     <value>Not refreshed</value>
   </data>
   <data name="ModelEntityDailyNoteRefreshTimeFormat" xml:space="preserve">
-    <value>Refresh at {0:yyyy/MM/dd HH:mm:ss}</value>
+    <value>Refresh at {0:MM.dd HH:mm:ss}</value>
   </data>
   <data name="ModelEntitySpiralAbyssScheduleFormat" xml:space="preserve">
     <value>Schedule {0}</value>
@@ -409,6 +412,93 @@
   <data name="ModelMetadataMaterialWeaponEnhancementMaterial" xml:space="preserve">
     <value>Weapon Enhancement Materials</value>
     <comment>Need EXACT same string in game</comment>
+  </data>
+  <data name="ModelMetadataTowerGoalTypeDefeatMonsters" xml:space="preserve">
+    <value>Eliminate Monsters</value>
+  </data>
+  <data name="ModelMetadataTowerGoalTypeDefendTarget" xml:space="preserve">
+    <value>Protect Ley Line Monolith</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeAdditional" xml:space="preserve">
+    <value>Addition: Monster Reinforce</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeDefault" xml:space="preserve">
+    <value>Monsters in this Chamber</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupA" xml:space="preserve">
+    <value>Group A: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave1" xml:space="preserve">
+    <value>Group A Wave 1: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave2" xml:space="preserve">
+    <value>Group A Wave 2: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave3" xml:space="preserve">
+    <value>Group A Wave 3: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupB" xml:space="preserve">
+    <value>Group B: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave1" xml:space="preserve">
+    <value>Group B Wave 1: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave2" xml:space="preserve">
+    <value>Group B Wave 2: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave3" xml:space="preserve">
+    <value>Group B Wave 3: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupC" xml:space="preserve">
+    <value>Group C: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave1" xml:space="preserve">
+    <value>Group C Wave 1: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave2" xml:space="preserve">
+    <value>Group C Wave 2: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave3" xml:space="preserve">
+    <value>Group C Wave 3: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupD" xml:space="preserve">
+    <value>Group D: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave1" xml:space="preserve">
+    <value>Group D Wave 1: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave2" xml:space="preserve">
+    <value>Group D Wave 2: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave3" xml:space="preserve">
+    <value>Group D Wave 3: Different groups coexist and have independent waves</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeIndependent" xml:space="preserve">
+    <value>Independent from other monsters</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeSuppressed" xml:space="preserve">
+    <value>No wave data</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave1" xml:space="preserve">
+    <value>Wave 1: A wave will spawn only after killing all enemies in the previous wave</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave1Additional" xml:space="preserve">
+    <value>Wave 1 Addition: First wave of monster reinforce</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave2" xml:space="preserve">
+    <value>Wave 2: A wave will spawn only after killing all enemies in the previous wave</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave3" xml:space="preserve">
+    <value>Wave 3: A wave will spawn only after killing all enemies in the previous wave</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave4" xml:space="preserve">
+    <value>Wave 4: A wave will spawn only after killing all enemies in the previous wave</value>
+  </data>
+  <data name="ModelNameValueDefaultDescription" xml:space="preserve">
+    <value>Please update showcase data</value>
+  </data>
+  <data name="ModelNameValueDefaultName" xml:space="preserve">
+    <value>No data</value>
   </data>
   <data name="ModelWeaponAffixFormat" xml:space="preserve">
     <value>Refinement {0}</value>
@@ -669,7 +759,7 @@
     <value>Game process closed</value>
   </data>
   <data name="ServiceGameLaunchPhaseProcessInitializing" xml:space="preserve">
-    <value>Initializing game process…</value>
+    <value>Initializing game process</value>
   </data>
   <data name="ServiceGameLaunchPhaseProcessStarted" xml:space="preserve">
     <value>Game process started</value>
@@ -726,16 +816,16 @@
     <value>PowerShell installation directory not found</value>
   </data>
   <data name="ServiceGameSetMultiChannelConfigFileNotFound" xml:space="preserve">
-    <value>Game configuration file {0} not found</value>
+    <value>Unable to read game config file {0}, file may be not exist</value>
   </data>
   <data name="ServiceGameSetMultiChannelUnauthorizedAccess" xml:space="preserve">
     <value>Unable to read or save profile, please try again in administrator mode</value>
   </data>
   <data name="ServiceGameUnlockerFindModuleNoModuleFound" xml:space="preserve">
-    <value>Error finding required modules: could not read any module, the protection driver may have been loaded</value>
+    <value>Error finding required modules: could not read any module, the protection driver may have been loaded; please retry</value>
   </data>
   <data name="ServiceGameUnlockerFindModuleTimeLimitExeeded" xml:space="preserve">
-    <value>Error finding required modules: timeout</value>
+    <value>Error finding required modules: timeout; please retry</value>
   </data>
   <data name="ServiceGameUnlockerInterestedPatternNotFound" xml:space="preserve">
     <value>Error matching memory pattern: no expected content</value>
@@ -747,7 +837,7 @@
     <value>Error reading process modules' memory: could not read valid value in given address</value>
   </data>
   <data name="ServiceHutaoUserGachaLogExpiredAt" xml:space="preserve">
-    <value>Wish history data backup service will be available until\n{0:yyyy-MM-dd HH:mm:ss}</value>
+    <value>Wish history data backup service will expire at \n{0:yyyy.MM.dd HH:mm:ss}</value>
   </data>
   <data name="ServiceMetadataFileNotFound" xml:space="preserve">
     <value>Unable to find cached metadata file</value>
@@ -770,8 +860,14 @@
   <data name="ServiceSignInRewardListRequestFailed" xml:space="preserve">
     <value>Fetch Signin reward list failed</value>
   </data>
+  <data name="ServiceSignInRiskVerificationFailed" xml:space="preserve">
+    <value>Verification failed, please visit MiYouShe checkin page to manually claim reward</value>
+  </data>
   <data name="ServiceSignInSuccessRewardFormat" xml:space="preserve">
     <value>Check-in successfully, {0} x {1}</value>
+  </data>
+  <data name="ServiceUIGFImportUnsupportedVersion" xml:space="preserve">
+    <value>Unsupported UIGF version</value>
   </data>
   <data name="ServiceUserCurrentMultiMatched" xml:space="preserve">
     <value>Multiple users recorded as selected</value>
@@ -890,6 +986,21 @@
   <data name="ViewDialogAchievementArchiveImportTitle" xml:space="preserve">
     <value>Import achievements data for current archive</value>
   </data>
+  <data name="ViewDialogCultivateBatchAvatarLevelTarget" xml:space="preserve">
+    <value>Character Target Level</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillATarget" xml:space="preserve">
+    <value>Attack Target Level</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillETarget" xml:space="preserve">
+    <value>Elemental Skill Target Level</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillQTarget" xml:space="preserve">
+    <value>Elemental Burst Target Level</value>
+  </data>
+  <data name="ViewDialogCultivateBatchWeaponLevelTarget" xml:space="preserve">
+    <value>Weapon Target Level</value>
+  </data>
   <data name="ViewDialogCultivateProjectAttachUid" xml:space="preserve">
     <value>Bind current user and role</value>
   </data>
@@ -899,8 +1010,11 @@
   <data name="ViewDialogCultivateProjectTitle" xml:space="preserve">
     <value>Create new plan</value>
   </data>
+  <data name="ViewDialogCultivatePromotionDeltaBatchTitle" xml:space="preserve">
+    <value>Batch add or update to current Dev Plan</value>
+  </data>
   <data name="ViewDialogCultivatePromotionDeltaTitle" xml:space="preserve">
-    <value>Add to Current Dev Plan</value>
+    <value>Add or update to current Dev Plan</value>
   </data>
   <data name="ViewDialogDailyNoteNotificationDailyTaskNotify" xml:space="preserve">
     <value>Daily Commission Availability Notification</value>
@@ -909,7 +1023,7 @@
     <value>Expedition Reward Notification</value>
   </data>
   <data name="ViewDialogDailyNoteNotificationHomeCoinNotifyThreshold" xml:space="preserve">
-    <value>Original Resin Alarm Threshold</value>
+    <value>Realm Currency Alarm Threshold</value>
   </data>
   <data name="ViewDialogDailyNoteNotificationResinNotifyThreshold" xml:space="preserve">
     <value>Realm Currency Alarm Threshold</value>
@@ -966,7 +1080,7 @@
     <value>Example</value>
   </data>
   <data name="ViewDialogGeetestCustomUrlTitle" xml:space="preserve">
-    <value>Configure no authentication interface</value>
+    <value>Configure Geetest CAPTCHA Verficaition API</value>
   </data>
   <data name="ViewDialogImportExportApp" xml:space="preserve">
     <value>Export App</value>
@@ -1103,6 +1217,9 @@
   <data name="ViewModelAchievementRemoveArchiveTitle" xml:space="preserve">
     <value>Are you sure you want to delete archive {0}?</value>
   </data>
+  <data name="ViewModelAvatarPropertyBatchCultivateProgressTitle" xml:space="preserve">
+    <value>Fetching ascension materials...</value>
+  </data>
   <data name="ViewModelAvatarPropertyCalculateWeaponNull" xml:space="preserve">
     <value>Can't calculate current character. Please try again after syncing data.</value>
   </data>
@@ -1126,6 +1243,12 @@
   </data>
   <data name="ViewModelCultivationAddWarning" xml:space="preserve">
     <value>Failed to add development plan</value>
+  </data>
+  <data name="ViewModelCultivationBatchAddCompletedFormat" xml:space="preserve">
+    <value>Operation completed: added/updated {0}, skipped {1}</value>
+  </data>
+  <data name="ViewModelCultivationBatchAddIncompletedFormat" xml:space="preserve">
+    <value>Operation not fully completed, added/updated {0}, skipped {1}</value>
   </data>
   <data name="ViewModelCultivationEntryAddSuccess" xml:space="preserve">
     <value>Successfully added to current plan</value>
@@ -1233,7 +1356,7 @@
     <value>Dowloading Assets</value>
   </data>
   <data name="ViewModelHutaoPassportEmailNotValidHint" xml:space="preserve">
-    <value>Please enter correct email address.</value>
+    <value>Please enter correct email address</value>
   </data>
   <data name="ViewModelImportFromClipboardErrorTitle" xml:space="preserve">
     <value>Text format in clipboard is incorrect</value>
@@ -1251,7 +1374,7 @@
     <value>Convert server failed</value>
   </data>
   <data name="ViewModelLaunchGameMultiChannelReadFail" xml:space="preserve">
-    <value>Unable to read game client configuration: {0}</value>
+    <value>Unable to read game config file: {0}, file may be not exist not lack of user permission</value>
   </data>
   <data name="ViewModelLaunchGamePathInvalid" xml:space="preserve">
     <value>Game program path is incorrect. Change it in the Settings Page.</value>
@@ -1261,6 +1384,9 @@
   </data>
   <data name="ViewModelLaunchGameSwitchGameAccountFail" xml:space="preserve">
     <value>Switch game account failed</value>
+  </data>
+  <data name="ViewModelSettingActionComplete" xml:space="preserve">
+    <value>Operation completed</value>
   </data>
   <data name="ViewModelSettingClearWebCacheFail" xml:space="preserve">
     <value>Clear failed. No permission in the file directory. Retry it in administrator mode.</value>
@@ -1335,7 +1461,7 @@
     <value>Delete Current Archive</value>
   </data>
   <data name="ViewPageAchievementSearchPlaceholder" xml:space="preserve">
-    <value>Search achievement name, description or ID</value>
+    <value>Name, description, version or ID</value>
   </data>
   <data name="ViewPageAchievementSortIncompletedItemsFirst" xml:space="preserve">
     <value>Prefer incomplete</value>
@@ -1348,6 +1474,12 @@
   </data>
   <data name="ViewPageAvatarPropertyArtifactScore" xml:space="preserve">
     <value>Artifacts Rating</value>
+  </data>
+  <data name="ViewPageAvatarPropertyCalculateAll" xml:space="preserve">
+    <value>All characters and weapons</value>
+  </data>
+  <data name="ViewPageAvatarPropertyCalculateCurrent" xml:space="preserve">
+    <value>Current character and weapon</value>
   </data>
   <data name="ViewPageAvatarPropertyCritScore" xml:space="preserve">
     <value>CRIT Rating</value>
@@ -1551,7 +1683,7 @@
     <value>Fetch</value>
   </data>
   <data name="ViewPageGachaLogRefreshByManualInput" xml:space="preserve">
-    <value>Type in URL manually.</value>
+    <value>Input URL Manually</value>
   </data>
   <data name="ViewPageGachaLogRefreshByManualInputDescription" xml:space="preserve">
     <value>We use provided URL to refresh your wish history</value>
@@ -1847,6 +1979,15 @@
   <data name="ViewPageSettingCopyDeviceIdAction" xml:space="preserve">
     <value>Copy</value>
   </data>
+  <data name="ViewPageSettingCreateDesktopShortcutAction" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="ViewPageSettingCreateDesktopShortcutDescription" xml:space="preserve">
+    <value>Create desktop shortcut with administrator privilege</value>
+  </data>
+  <data name="ViewPageSettingCreateDesktopShortcutHeader" xml:space="preserve">
+    <value>Create Desktop Shortcut</value>
+  </data>
   <data name="ViewPageSettingDangerousAction" xml:space="preserve">
     <value>Execute</value>
   </data>
@@ -1914,7 +2055,34 @@
     <value>Config Geetest Verification Endpoint</value>
   </data>
   <data name="ViewPageSettingGeetestVerificationHeader" xml:space="preserve">
-    <value>Geetest Verification</value>
+    <value>CAPTCHA</value>
+  </data>
+  <data name="ViewpageSettingHomeCardDescription" xml:space="preserve">
+    <value>Manage cards on home dashboard</value>
+  </data>
+  <data name="ViewpageSettingHomeCardHeader" xml:space="preserve">
+    <value>Dashboard card</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemAchievementHeader" xml:space="preserve">
+    <value>Achievements</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemDailyNoteHeader" xml:space="preserve">
+    <value>Realtime Notes</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemgachaStatisticsHeader" xml:space="preserve">
+    <value>Wish History</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemLaunchGameHeader" xml:space="preserve">
+    <value>Game Launcher</value>
+  </data>
+  <data name="ViewPageSettingHomeCardOff" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="ViewPageSettingHomeCardOn" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="ViewpageSettingHomeHeader" xml:space="preserve">
+    <value>Home</value>
   </data>
   <data name="ViewPageSettingHutaoPassportHeader" xml:space="preserve">
     <value>Snap Hutao Account</value>
@@ -1926,7 +2094,7 @@
     <value>Enable Advanced Features</value>
   </data>
   <data name="ViewPageSettingOfficialSiteNavigate" xml:space="preserve">
-    <value>Go to Official Website</value>
+    <value>Official Website</value>
   </data>
   <data name="ViewPageSettingResetAction" xml:space="preserve">
     <value>Reset</value>
@@ -1952,8 +2120,17 @@
   <data name="ViewPageSettingSetGamePathHint" xml:space="preserve">
     <value>When setting the game path, please select the game program (Yuanshen.exe or GenshinImpact.exe) instead of the game launcher (launcher.exe)</value>
   </data>
+  <data name="ViewPageSettingSetPowerShellDescription" xml:space="preserve">
+    <value>Snap Hutao uses PowerShell to modify information in registry to change game accounts</value>
+  </data>
+  <data name="ViewPageSettingSetPowerShellPathHeader" xml:space="preserve">
+    <value>PowerShell Path</value>
+  </data>
+  <data name="ViewPageSettingShellExperienceHeader" xml:space="preserve">
+    <value>Shell Experience</value>
+  </data>
   <data name="ViewPageSettingSponsorNavigate" xml:space="preserve">
-    <value>Sponsor Us</value>
+    <value>Sponsor Snap Hutao</value>
   </data>
   <data name="ViewPageSettingStorageHeader" xml:space="preserve">
     <value>Storage</value>
@@ -1964,11 +2141,14 @@
   <data name="ViewPageSettingStorageSetAction" xml:space="preserve">
     <value>Set</value>
   </data>
+  <data name="ViewPageSettingStoreReviewNavigate" xml:space="preserve">
+    <value>Rate Snap Hutao</value>
+  </data>
   <data name="ViewPageSettingTranslateNavigate" xml:space="preserve">
     <value>Contribute Translations</value>
   </data>
   <data name="ViewPageSettingUpdateCheckAction" xml:space="preserve">
-    <value>Go to Store</value>
+    <value>Store Page</value>
   </data>
   <data name="ViewPageSettingWebview2Header" xml:space="preserve">
     <value>Webview2 Runtime</value>
@@ -2057,6 +2237,12 @@
   <data name="ViewServiceHutaoUserLoginOrRegisterHint" xml:space="preserve">
     <value>Sign in or register now</value>
   </data>
+  <data name="ViewSpiralAbyssAvatarAppearanceRankDescription" xml:space="preserve">
+    <value>Character Appearance Rate = Character Appearance in this Floor (only count for 1 if repeated) / Total Number of Abyss Record of this Floor</value>
+  </data>
+  <data name="ViewSpiralAbyssAvatarUsageRankDescription" xml:space="preserve">
+    <value>Character Usage Rate = Character Appearance in this Floor (only count for 1 is repeated) / Number of Player who Own this Character</value>
+  </data>
   <data name="ViewSpiralAbyssBattleHeader" xml:space="preserve">
     <value>Battle Statistics</value>
   </data>
@@ -2073,19 +2259,28 @@
     <value>Most Defeats</value>
   </data>
   <data name="ViewSpiralAbyssDetail" xml:space="preserve">
-    <value>Details</value>
+    <value>Schedules Detail</value>
   </data>
   <data name="ViewSpiralAbyssEnergySkill" xml:space="preserve">
     <value>Elemental Bursts Unleashed</value>
   </data>
   <data name="ViewSpiralAbyssHeader" xml:space="preserve">
-    <value>Abyss Records</value>
+    <value>Spiral Abyss</value>
+  </data>
+  <data name="ViewSpiralAbyssHutaoStatistics" xml:space="preserve">
+    <value>Statistics</value>
   </data>
   <data name="ViewSpiralAbyssMaxFloor" xml:space="preserve">
     <value>Deepest Descent</value>
   </data>
   <data name="ViewSpiralAbyssNormalSkill" xml:space="preserve">
     <value>Elemental Skills Cast</value>
+  </data>
+  <data name="ViewSpiralAbyssRecordBattleAvatars" xml:space="preserve">
+    <value>Lineup</value>
+  </data>
+  <data name="ViewSpiralAbyssRecordMonsterAttacksMonolith" xml:space="preserve">
+    <value>Attack monolith</value>
   </data>
   <data name="ViewSpiralAbyssRefresh" xml:space="preserve">
     <value>Refresh Data</value>
@@ -2138,6 +2333,9 @@
   <data name="ViewUserDefaultDescription" xml:space="preserve">
     <value>Please login first</value>
   </data>
+  <data name="ViewUserDocumentationHeader" xml:space="preserve">
+    <value>Document</value>
+  </data>
   <data name="ViewUserRefreshCookieTokenSuccess" xml:space="preserve">
     <value>Refresh CookieToken successfully</value>
   </data>
@@ -2181,13 +2379,13 @@
     <value>〓活动时间〓.*?\d\.\d版本期间持续开放</value>
   </data>
   <data name="WebAnnouncementMatchTransientActivityTime" xml:space="preserve">
-    <value>(?:〓活动时间〓|祈愿时间|【上架时间】).*?(\d\.\d版本更新后|\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}).*?~.*?&amp;lt;t class="t_(?:gl|lc)".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>
+    <value>(?:〓活动时间〓|祈愿时间|【上架时间】).*?(\d\.\d版本更新后).*?~.*?&amp;lt;t class="t_(?:gl|lc)".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>
   </data>
   <data name="WebAnnouncementMatchVersionUpdateTime" xml:space="preserve">
     <value>〓更新时间〓.+?&amp;lt;t class=\"t_(?:gl|lc)\".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>
   </data>
   <data name="WebAnnouncementMatchVersionUpdateTitle" xml:space="preserve">
-    <value>\d\.\d版本更新说明</value>
+    <value>Version \d\.\d Update Maintenance Preview</value>
   </data>
   <data name="WebAnnouncementTimeDaysBeginFormat" xml:space="preserve">
     <value>Start in {0} days</value>

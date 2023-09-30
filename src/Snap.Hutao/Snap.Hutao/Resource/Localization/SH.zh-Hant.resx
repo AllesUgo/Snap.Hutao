@@ -186,6 +186,9 @@
   <data name="FilePickerImportCommit" xml:space="preserve">
     <value>匯入</value>
   </data>
+  <data name="FilePickerPowerShellCommit" xml:space="preserve">
+    <value>選擇 PowerShell</value>
+  </data>
   <data name="GuideWindowTitle" xml:space="preserve">
     <value>歡迎使用胡桃</value>
   </data>
@@ -241,7 +244,7 @@
     <value>尚未刷新</value>
   </data>
   <data name="ModelEntityDailyNoteRefreshTimeFormat" xml:space="preserve">
-    <value>刷新於 {0:yyyy/MM/dd HH:mm:ss}</value>
+    <value>刷新于 {0:MM.dd HH:mm:ss}</value>
   </data>
   <data name="ModelEntitySpiralAbyssScheduleFormat" xml:space="preserve">
     <value>第 {0} 期</value>
@@ -409,6 +412,93 @@
   <data name="ModelMetadataMaterialWeaponEnhancementMaterial" xml:space="preserve">
     <value>武器強化素材</value>
     <comment>Need EXACT same string in game</comment>
+  </data>
+  <data name="ModelMetadataTowerGoalTypeDefeatMonsters" xml:space="preserve">
+    <value>擊敗怪物</value>
+  </data>
+  <data name="ModelMetadataTowerGoalTypeDefendTarget" xml:space="preserve">
+    <value>守護目標</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeAdditional" xml:space="preserve">
+    <value>附加：增援怪物</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeDefault" xml:space="preserve">
+    <value>本間怪物</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupA" xml:space="preserve">
+    <value>A組：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave1" xml:space="preserve">
+    <value>A組第一波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave2" xml:space="preserve">
+    <value>A組第二波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupAWave3" xml:space="preserve">
+    <value>A組第三波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupB" xml:space="preserve">
+    <value>B組：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave1" xml:space="preserve">
+    <value>B組第一波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave2" xml:space="preserve">
+    <value>B組第二波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupBWave3" xml:space="preserve">
+    <value>B組第三波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupC" xml:space="preserve">
+    <value>C組：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave1" xml:space="preserve">
+    <value>C組第一波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave2" xml:space="preserve">
+    <value>C組第二波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupCWave3" xml:space="preserve">
+    <value>C組第三波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupD" xml:space="preserve">
+    <value>D組：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave1" xml:space="preserve">
+    <value>D組第一波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave2" xml:space="preserve">
+    <value>D組第二波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeGroupDWave3" xml:space="preserve">
+    <value>D組第三波：不同的組同時在場，各自分波獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeIndependent" xml:space="preserve">
+    <value>與其他怪物獨立</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeSuppressed" xml:space="preserve">
+    <value>暫時沒有分波訊息</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave1" xml:space="preserve">
+    <value>第一波：擊敗所有怪物，下一波才會出現</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave1Additional" xml:space="preserve">
+    <value>第一波附加：增援第一波怪物</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave2" xml:space="preserve">
+    <value>第二波：擊敗所有怪物，下一波才會出現</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave3" xml:space="preserve">
+    <value>第三波：擊敗所有怪物，下一波才會出現</value>
+  </data>
+  <data name="ModelMetadataTowerWaveTypeWave4" xml:space="preserve">
+    <value>第四波：擊敗所有怪物，下一波才會出現</value>
+  </data>
+  <data name="ModelNameValueDefaultDescription" xml:space="preserve">
+    <value>請更新角色櫥窗數據</value>
+  </data>
+  <data name="ModelNameValueDefaultName" xml:space="preserve">
+    <value>暫無數據</value>
   </data>
   <data name="ModelWeaponAffixFormat" xml:space="preserve">
     <value>精煉 {0} 階</value>
@@ -726,16 +816,16 @@
     <value>找不到 PowerShell 的安裝目錄</value>
   </data>
   <data name="ServiceGameSetMultiChannelConfigFileNotFound" xml:space="preserve">
-    <value>無法找到遊戲配置檔案 {0}</value>
+    <value>無法讀取遊戲設定檔 {0}，可能是檔案不存在</value>
   </data>
   <data name="ServiceGameSetMultiChannelUnauthorizedAccess" xml:space="preserve">
     <value>無法讀取或保存配置文件，請用管理員模式重試</value>
   </data>
   <data name="ServiceGameUnlockerFindModuleNoModuleFound" xml:space="preserve">
-    <value>在尋找必要的模組時遇到問題：無法讀取任何模組，可能是保護驅動已經載入完成</value>
+    <value>在尋找必要的模組時遇到問題：無法讀取任何模組，可能是保護驅動已經載入完成，請重試</value>
   </data>
   <data name="ServiceGameUnlockerFindModuleTimeLimitExeeded" xml:space="preserve">
-    <value>在尋找必要的模組時遇到問題：尋找模組超時</value>
+    <value>在尋找必要的模組時遇到問題：尋找模組超時，請重試</value>
   </data>
   <data name="ServiceGameUnlockerInterestedPatternNotFound" xml:space="preserve">
     <value>在比對內存時遇到問題：無法比對到期望的內容</value>
@@ -747,7 +837,7 @@
     <value>在讀取遊戲程序內存時遇到問題：無法讀取到指定地址的有效值</value>
   </data>
   <data name="ServiceHutaoUserGachaLogExpiredAt" xml:space="preserve">
-    <value>祈願記錄上傳服務有效期至\n{0:yyyy-MM-dd HH:mm:ss}</value>
+    <value>祈願紀錄上傳服務有效期至\n{0:yyyy.MM.dd HH:mm:ss}</value>
   </data>
   <data name="ServiceMetadataFileNotFound" xml:space="preserve">
     <value>無法找到暫存的元數據文件</value>
@@ -770,8 +860,14 @@
   <data name="ServiceSignInRewardListRequestFailed" xml:space="preserve">
     <value>獲取獎勵列表失敗</value>
   </data>
+  <data name="ServiceSignInRiskVerificationFailed" xml:space="preserve">
+    <value>驗證失敗，請前往HoYoLab原神簽到頁面自行領取獎勵</value>
+  </data>
   <data name="ServiceSignInSuccessRewardFormat" xml:space="preserve">
     <value>遷到成功，{0}×{1}</value>
+  </data>
+  <data name="ServiceUIGFImportUnsupportedVersion" xml:space="preserve">
+    <value>不支援的 UIGF 版本</value>
   </data>
   <data name="ServiceUserCurrentMultiMatched" xml:space="preserve">
     <value>已选中多条用户记录</value>
@@ -890,6 +986,21 @@
   <data name="ViewDialogAchievementArchiveImportTitle" xml:space="preserve">
     <value>為當前存檔導入成就</value>
   </data>
+  <data name="ViewDialogCultivateBatchAvatarLevelTarget" xml:space="preserve">
+    <value>角色目標等級</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillATarget" xml:space="preserve">
+    <value>普通攻擊目標等級</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillETarget" xml:space="preserve">
+    <value>元素戰技目標等級</value>
+  </data>
+  <data name="ViewDialogCultivateBatchSkillQTarget" xml:space="preserve">
+    <value>元素爆發目標等級</value>
+  </data>
+  <data name="ViewDialogCultivateBatchWeaponLevelTarget" xml:space="preserve">
+    <value>武器目標等級</value>
+  </data>
   <data name="ViewDialogCultivateProjectAttachUid" xml:space="preserve">
     <value>綁定當前用戶與角色</value>
   </data>
@@ -899,8 +1010,11 @@
   <data name="ViewDialogCultivateProjectTitle" xml:space="preserve">
     <value>創建新的養成計劃</value>
   </data>
+  <data name="ViewDialogCultivatePromotionDeltaBatchTitle" xml:space="preserve">
+    <value>批量添加或更新到當前養成計畫</value>
+  </data>
   <data name="ViewDialogCultivatePromotionDeltaTitle" xml:space="preserve">
-    <value>添加到當前養成計劃</value>
+    <value>添加或更新到當前養成計畫</value>
   </data>
   <data name="ViewDialogDailyNoteNotificationDailyTaskNotify" xml:space="preserve">
     <value>每日委託上線提醒</value>
@@ -1103,6 +1217,9 @@
   <data name="ViewModelAchievementRemoveArchiveTitle" xml:space="preserve">
     <value>確定要刪除存檔 {0} 嗎？</value>
   </data>
+  <data name="ViewModelAvatarPropertyBatchCultivateProgressTitle" xml:space="preserve">
+    <value>獲取培養材料中，請稍後...</value>
+  </data>
   <data name="ViewModelAvatarPropertyCalculateWeaponNull" xml:space="preserve">
     <value>當前角色無法計算，請同步信息後再試</value>
   </data>
@@ -1126,6 +1243,12 @@
   </data>
   <data name="ViewModelCultivationAddWarning" xml:space="preserve">
     <value>養成計劃添加失敗</value>
+  </data>
+  <data name="ViewModelCultivationBatchAddCompletedFormat" xml:space="preserve">
+    <value>操作完成：添加/更新：{0} 個，跳過 {1} 個</value>
+  </data>
+  <data name="ViewModelCultivationBatchAddIncompletedFormat" xml:space="preserve">
+    <value>操作未全部完成：添加/更新：{0} 個，跳過 {1} 個</value>
   </data>
   <data name="ViewModelCultivationEntryAddSuccess" xml:space="preserve">
     <value>已成功新增至目前養成計劃</value>
@@ -1251,7 +1374,7 @@
     <value>切換伺服器失敗</value>
   </data>
   <data name="ViewModelLaunchGameMultiChannelReadFail" xml:space="preserve">
-    <value>無法讀取遊戲設定文件: {0}</value>
+    <value>無法讀取遊戲設定檔案: {0}，可能是檔案不存在或權限不足</value>
   </data>
   <data name="ViewModelLaunchGamePathInvalid" xml:space="preserve">
     <value>游戲程式路徑不正確，前往設定更改遊戲路徑</value>
@@ -1261,6 +1384,9 @@
   </data>
   <data name="ViewModelLaunchGameSwitchGameAccountFail" xml:space="preserve">
     <value>切換帳號失敗</value>
+  </data>
+  <data name="ViewModelSettingActionComplete" xml:space="preserve">
+    <value>操作完成</value>
   </data>
   <data name="ViewModelSettingClearWebCacheFail" xml:space="preserve">
     <value>清除失敗，文件目錄權限不足，請使用管理員模式重試</value>
@@ -1335,7 +1461,7 @@
     <value>刪除當前存檔</value>
   </data>
   <data name="ViewPageAchievementSearchPlaceholder" xml:space="preserve">
-    <value>搜索成就名稱，描述或編號</value>
+    <value>搜索成就名稱，描述，版本或編號</value>
   </data>
   <data name="ViewPageAchievementSortIncompletedItemsFirst" xml:space="preserve">
     <value>優先未完成</value>
@@ -1348,6 +1474,12 @@
   </data>
   <data name="ViewPageAvatarPropertyArtifactScore" xml:space="preserve">
     <value>聖遺物評分</value>
+  </data>
+  <data name="ViewPageAvatarPropertyCalculateAll" xml:space="preserve">
+    <value>所有角色與武器</value>
+  </data>
+  <data name="ViewPageAvatarPropertyCalculateCurrent" xml:space="preserve">
+    <value>當前角色與武器</value>
   </data>
   <data name="ViewPageAvatarPropertyCritScore" xml:space="preserve">
     <value>雙暴評分</value>
@@ -1847,6 +1979,15 @@
   <data name="ViewPageSettingCopyDeviceIdAction" xml:space="preserve">
     <value>複製</value>
   </data>
+  <data name="ViewPageSettingCreateDesktopShortcutAction" xml:space="preserve">
+    <value>創建</value>
+  </data>
+  <data name="ViewPageSettingCreateDesktopShortcutDescription" xml:space="preserve">
+    <value>在桌面上創建預設以管理員方式啟動的快捷方式</value>
+  </data>
+  <data name="ViewPageSettingCreateDesktopShortcutHeader" xml:space="preserve">
+    <value>創建快捷方式</value>
+  </data>
   <data name="ViewPageSettingDangerousAction" xml:space="preserve">
     <value>執行</value>
   </data>
@@ -1916,6 +2057,33 @@
   <data name="ViewPageSettingGeetestVerificationHeader" xml:space="preserve">
     <value>無感驗證</value>
   </data>
+  <data name="ViewpageSettingHomeCardDescription" xml:space="preserve">
+    <value>管理主頁儀表板中的卡片</value>
+  </data>
+  <data name="ViewpageSettingHomeCardHeader" xml:space="preserve">
+    <value>主頁卡片</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemAchievementHeader" xml:space="preserve">
+    <value>成就管理</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemDailyNoteHeader" xml:space="preserve">
+    <value>實時便籤</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemgachaStatisticsHeader" xml:space="preserve">
+    <value>祈願紀錄</value>
+  </data>
+  <data name="ViewpageSettingHomeCardItemLaunchGameHeader" xml:space="preserve">
+    <value>啟動遊戲</value>
+  </data>
+  <data name="ViewPageSettingHomeCardOff" xml:space="preserve">
+    <value>隱藏</value>
+  </data>
+  <data name="ViewPageSettingHomeCardOn" xml:space="preserve">
+    <value>顯示</value>
+  </data>
+  <data name="ViewpageSettingHomeHeader" xml:space="preserve">
+    <value>主頁</value>
+  </data>
   <data name="ViewPageSettingHutaoPassportHeader" xml:space="preserve">
     <value>Snap Hutao 賬號</value>
   </data>
@@ -1952,6 +2120,15 @@
   <data name="ViewPageSettingSetGamePathHint" xml:space="preserve">
     <value>設置游戲路徑時，請選擇游戲本體（YuanShen.exe 或 GenshinImpact.exe） 而不是啓動器（launcher.exe）</value>
   </data>
+  <data name="ViewPageSettingSetPowerShellDescription" xml:space="preserve">
+    <value>胡桃使用 PowerShell 更改註冊表中的信息以修改遊戲內賬號</value>
+  </data>
+  <data name="ViewPageSettingSetPowerShellPathHeader" xml:space="preserve">
+    <value>PowerShell 路徑</value>
+  </data>
+  <data name="ViewPageSettingShellExperienceHeader" xml:space="preserve">
+    <value>Shell 體驗</value>
+  </data>
   <data name="ViewPageSettingSponsorNavigate" xml:space="preserve">
     <value>贊助我們</value>
   </data>
@@ -1963,6 +2140,9 @@
   </data>
   <data name="ViewPageSettingStorageSetAction" xml:space="preserve">
     <value>更改</value>
+  </data>
+  <data name="ViewPageSettingStoreReviewNavigate" xml:space="preserve">
+    <value>評價軟體</value>
   </data>
   <data name="ViewPageSettingTranslateNavigate" xml:space="preserve">
     <value>貢獻翻譯</value>
@@ -2057,6 +2237,12 @@
   <data name="ViewServiceHutaoUserLoginOrRegisterHint" xml:space="preserve">
     <value>立即登入或註冊</value>
   </data>
+  <data name="ViewSpiralAbyssAvatarAppearanceRankDescription" xml:space="preserve">
+    <value>角色出場率 = 本層上陣該角色次數（層內重複出現只記一次）/ 深淵記錄總數</value>
+  </data>
+  <data name="ViewSpiralAbyssAvatarUsageRankDescription" xml:space="preserve">
+    <value>角色使用率 = 本層上陣該角色次數（層內重複出現只記一次）/ 持有該角色的深淵記錄總數</value>
+  </data>
   <data name="ViewSpiralAbyssBattleHeader" xml:space="preserve">
     <value>戰鬥數據</value>
   </data>
@@ -2073,19 +2259,28 @@
     <value>最多擊破</value>
   </data>
   <data name="ViewSpiralAbyssDetail" xml:space="preserve">
-    <value>詳細數據</value>
+    <value>分期详情</value>
   </data>
   <data name="ViewSpiralAbyssEnergySkill" xml:space="preserve">
     <value>元素爆發</value>
   </data>
   <data name="ViewSpiralAbyssHeader" xml:space="preserve">
-    <value>深淵記錄</value>
+    <value>深境螺旋</value>
+  </data>
+  <data name="ViewSpiralAbyssHutaoStatistics" xml:space="preserve">
+    <value>本期統計</value>
   </data>
   <data name="ViewSpiralAbyssMaxFloor" xml:space="preserve">
     <value>最深抵達</value>
   </data>
   <data name="ViewSpiralAbyssNormalSkill" xml:space="preserve">
     <value>元素戰技</value>
+  </data>
+  <data name="ViewSpiralAbyssRecordBattleAvatars" xml:space="preserve">
+    <value>上場角色</value>
+  </data>
+  <data name="ViewSpiralAbyssRecordMonsterAttacksMonolith" xml:space="preserve">
+    <value>攻擊地脈鎮石</value>
   </data>
   <data name="ViewSpiralAbyssRefresh" xml:space="preserve">
     <value>重新整理數據</value>
@@ -2138,6 +2333,9 @@
   <data name="ViewUserDefaultDescription" xml:space="preserve">
     <value>請先登錄</value>
   </data>
+  <data name="ViewUserDocumentationHeader" xml:space="preserve">
+    <value>文檔</value>
+  </data>
   <data name="ViewUserRefreshCookieTokenSuccess" xml:space="preserve">
     <value>刷新 CookieToken 成功</value>
   </data>
@@ -2181,7 +2379,7 @@
     <value>〓活動時間〓.*?\d\.\d版本期間持續開放</value>
   </data>
   <data name="WebAnnouncementMatchTransientActivityTime" xml:space="preserve">
-    <value>(?:〓活動時間〓|祈願時間|【上架時間】).*?(\d\.\d版本更新後|\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}).*?~.*?&amp;lt;t class="t_(?:gl|lc)".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>
+    <value>(?:〓活動時間〓|祈願時間|【上架時間】).*?(\d\.\d版本更新後).*?~.*?&amp;lt;t class="t_(?:gl|lc)".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>
   </data>
   <data name="WebAnnouncementMatchVersionUpdateTime" xml:space="preserve">
     <value>〓更新時間〓.+?&amp;lt;t class=\"t_(?:gl|lc)\".*?&amp;gt;(.*?)&amp;lt;/t&amp;gt;</value>

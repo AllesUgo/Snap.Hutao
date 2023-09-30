@@ -13,7 +13,6 @@ using Snap.Hutao.Web.Hoyolab.Takumi.GameRecord;
 using Snap.Hutao.Web.Hoyolab.Takumi.GameRecord.Avatar;
 using Snap.Hutao.Web.Response;
 using System.Runtime.CompilerServices;
-using Windows.Perception.Spatial;
 using CalculateAvatar = Snap.Hutao.Web.Hoyolab.Takumi.Event.Calculate.Avatar;
 using EnkaAvatarInfo = Snap.Hutao.Web.Enka.Model.AvatarInfo;
 using EntityAvatarInfo = Snap.Hutao.Model.Entity.AvatarInfo;
@@ -77,7 +76,7 @@ internal sealed partial class AvatarInfoDbBulkOperation
     {
         token.ThrowIfCancellationRequested();
         string uid = userAndUid.Uid.Value;
-        List<EntityAvatarInfo> dbInfos = avatarInfoDbService.GetAvatarInfoListByUid(uid);
+        List<EntityAvatarInfo> dbInfos = await avatarInfoDbService.GetAvatarInfoListByUidAsync(uid).ConfigureAwait(false);
         EnsureItemsAvatarIdDistinct(ref dbInfos, uid);
 
         using (IServiceScope scope = serviceProvider.CreateScope())
@@ -121,7 +120,7 @@ internal sealed partial class AvatarInfoDbBulkOperation
             }
         }
 
-        return avatarInfoDbService.GetAvatarInfoListByUid(uid);
+        return await avatarInfoDbService.GetAvatarInfoListByUidAsync(uid).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -134,7 +133,7 @@ internal sealed partial class AvatarInfoDbBulkOperation
     {
         token.ThrowIfCancellationRequested();
         string uid = userAndUid.Uid.Value;
-        List<EntityAvatarInfo> dbInfos = avatarInfoDbService.GetAvatarInfoListByUid(uid);
+        List<EntityAvatarInfo> dbInfos = await avatarInfoDbService.GetAvatarInfoListByUidAsync(uid).ConfigureAwait(false);
         EnsureItemsAvatarIdDistinct(ref dbInfos, uid);
 
         using (IServiceScope scope = serviceProvider.CreateScope())
@@ -173,7 +172,7 @@ internal sealed partial class AvatarInfoDbBulkOperation
             }
         }
 
-        return avatarInfoDbService.GetAvatarInfoListByUid(uid);
+        return await avatarInfoDbService.GetAvatarInfoListByUidAsync(uid).ConfigureAwait(false);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -243,7 +242,7 @@ internal sealed partial class AvatarInfoDbBulkOperation
         // This means that there are duplicate items.
         if (distinctCount < dbInfos.Count)
         {
-            avatarInfoDbService.DeleteAvatarInfoRangeByUid(uid);
+            avatarInfoDbService.RemoveAvatarInfoRangeByUid(uid);
             dbInfos = new();
         }
     }
